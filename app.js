@@ -7,14 +7,18 @@ Add.addEventListener('click', (e) => {
   e.preventDefault();
   if (add_input.value){
     const edit_text = document.createElement('input');
+    edit_text.classList.add('input_list')
     edit_text.setAttribute('value',add_input.value);
     edit_text.setAttribute('readonly','readonly');
 
     const edit_button = document.createElement('button');
     edit_button.innerHTML= 'Edit';
+    edit_button.classList.add('button-80');
     const delete_button = document.createElement('button');
     delete_button.innerHTML = 'X';
+    delete_button.classList.add('button-80')
     const single_task_div = document.createElement('div');
+
     container.appendChild(single_task_div);
     single_task_div.appendChild(edit_text);
     single_task_div.appendChild(edit_button);
@@ -33,9 +37,6 @@ Add.addEventListener('click', (e) => {
 		delete_button.addEventListener('click', (e) => {
 			container.removeChild(single_task_div);
 		});
-  
-    
-
 
   }else
   {
